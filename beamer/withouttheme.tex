@@ -1,0 +1,167 @@
+\documentclass[dvipdfmx,11pt]{beamer}
+%----------------------------------------------------------------------------------%
+\usetheme{default}
+%----------------------------------------------------------------------------------%
+\usepackage{amsmath}
+%----------------------------------------------------------------------------------%
+%Beamer色設定
+%Black
+\definecolor{AlmostBlack}{RGB}{38,38,38}
+%Blue
+\definecolor{UniBlue}{RGB}{0,150,200}
+\definecolor{Navy}{RGB}{0,0,128}
+\definecolor{DarkBlue}{RGB}{0,0,100}
+%Red
+\definecolor{AlertOrange}{RGB}{255,76,0}
+\definecolor{FireBrick}{RGB}{178,34,34}
+\definecolor{OrengeRed}{RGB}{255,69,0}
+\definecolor{AlmostBlack}{RGB}{38,38,38}
+%Green
+\definecolor{DarkGreen}{RGB}{0,100,0}
+%----------------------------------------------------------------------------------%
+%beamercolorの設定
+\setbeamercolor{normal text}{fg=AlmostBlack}%本文の色
+\setbeamercolor{alerted text}{fg=OrengeRed}%\alertの色
+\setbeamercolor{structure}{fg=Navy}%structreの色
+\setbeamercolor{block title}{fg=white,bg=Navy}%ブロックのタイトルカラー
+\setbeamercolor{block title alerted}{fg=white,bg=FireBrick}%ブロックのタイトルカラー
+\setbeamercolor{block title example}{fg=white,bg=DarkGreen}%ブロックのタイトルカラー
+\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=DarkBlue} %上部の色
+%----------------------------------------------------------------------------------%
+\setbeamertemplate{navigation symbols}{} %ナビゲーションをなくす
+\setbeamertemplate{footline}[frame number]{}%ページ番号
+% \setbeamercolor{page number in head/foot}{fg=black, bg=black}%ページ番号の色
+\setbeamerfont{page number in head/foot}{family=\ttfamily}%ページ番号のフォント・大きさ
+% \setbeamerfont{page number in head/foot}{family=\ttfamily,size=\scriptsize}%ページ番号のフォント・大きさ
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+%----------------------------------------------------------------------------------%
+%%% 和文用 %%%
+\usepackage{bxdpx-beamer}% ナビゲーションシンボル
+\usepackage{pxjahyper}
+\usepackage{minijs}
+%%% 和文用 ここまで %%%
+%----------------------------------------------------------------------------------%
+\usepackage{bookmark}
+\usepackage{helvet}
+\renewcommand{\kanjifamilydefault}{\gtdefault} % 既定をゴシック体に
+\usepackage[deluxe,uplatex]{otf} % 日本語多ウェイト化
+% \renewcommand\thefootnote{*\arabic{footnote})}%脚注のスタイル
+% \renewcommand{\baselinestretch}{1.1}%行間を調整
+%----------------------------------------------------------------------------------%
+\usefonttheme{professionalfonts}% 数式
+\setbeamerfont{title}{size=\LARGE} % タイトル文字サイズ
+\setbeamerfont{author}{size=\normalsize} % タイトル文字サイズ
+\setbeamerfont{institute}{size=\scriptsize} % 所属の文字サイズ
+\setbeamerfont{date}{size=\scriptsize} % 日付の文字サイズ
+\setbeamerfont{frametitle}{size=\large} % フレームタイトルの文字サイズ
+\setbeamerfont{footnote}{size=\scriptsize} % 脚注の文字サイズを小さくする
+\useinnertheme{circles} % 箇条書きをシンプルにする
+% \setbeamertemplate{background}[grid][step=10mm]%背景を方眼に
+%----------------------------------------------------------------------------------%
+\AtBeginSection[]{%各セクションごとに目次を生成
+  \begin{frame}[plain]\frametitle{}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%----------------------------------------------------------------------------------%
+% information
+\title{双対性理論}
+\date{\today}
+\author{miruca}
+\institute{%
+Graduate School of Informatics, Kyoto University
+}
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+\begin{document}
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+% \maketitle%表紙の生成
+\begin{frame}[plain]\frametitle{}
+\titlepage %表紙
+\end{frame}
+%----------------------------------------------------------------------------------%
+\begin{frame}{Today's Topic}%目次の生成
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+\section{ミニマックス問題と鞍点}
+%----------------------------------------------------------------------------------%
+\begin{frame}[t]\frametitle{ミニマックス問題}%t->top,c->center,b->bottom
+    \begin{itemize}
+      \item $2$つの最適化問題の関係について調べる
+    \end{itemize}
+\end{frame}
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+\section{Section2}
+%----------------------------------------------------------------------------------%
+\begin{frame}[t]\frametitle{ブロック環境}
+    \begin{itemize}
+      \item 3種類のブロック環境が用意されている．
+    \end{itemize}
+    \begin{block}{block}
+      通常のブロック環境．
+    \end{block}
+    %
+    \begin{alertblock}{alert block}
+      定義などで用いられるイメージ．
+    \end{alertblock}
+    %
+    \begin{exampleblock}{example block}
+      例などで用いられるイメージ．
+    \end{exampleblock}
+\end{frame}
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+\section{Section3}
+%----------------------------------------------------------------------------------%
+\begin{frame}[t]\frametitle{数式}
+    \begin{itemize}
+      \item ``\texttt{professionalfonts}'' を使用している
+    \end{itemize}
+    \begin{align}
+        \int^{b}_{a} f(x) \,dx = \lim_{n \to \infty} \sum^{n-1}_{i=1} f(x_{i}) \Delta x
+      \end{align}
+\end{frame}
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+\section{Section4}
+%----------------------------------------------------------------------------------%
+\begin{frame}[t,allowframebreaks]\frametitle{参考文献}
+%斜体にすると警告が出るのでとりあえずは"\textit"を使っていない．
+    \scriptsize{%
+    \begin{thebibliography}{99}
+    \setlength{\itemsep}{-.5zw}
+    \beamertemplatetextbibitems
+    %
+    \bibitem{MultT} Kotz S, Nadarajah S. Multivariate t-distributions and their applications. Cambridge University Press, 2004.
+    %
+    \end{thebibliography}
+    }
+\end{frame}
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------------------------%
+\end{document}
