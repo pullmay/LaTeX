@@ -1,0 +1,66 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\usepackage{color,amsmath,amssymb,enumerate,graphicx}
+\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
+\usepackage{/Users/admin/Documents/LaTeX/style/mysty}%適切に指定する
+\usepackage{/Users/admin/Documents/LaTeX/style/mythmj}%適切に指定する
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}%shadow
+\newtcolorbox{defbox}{enhanced, colback=white, colframe=black, sharp corners, boxrule=.75pt, drop shadow=black!30!white}
+\newtcolorbox{theorembox}{enhanced, colback=white, colframe=black, boxrule=.75pt, arc=2mm, drop shadow=black!30!white}
+%
+\begin{document}
+% \maketitle
+% title
+% \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\begin{flushright}
+  \begin{tabular}{rl}
+    % 氏名: & miruca \footnotemark[2]\\
+    作成: & 2020年2月28日\\
+    更新: & \today
+  \end{tabular}
+\end{flushright}
+%
+\begin{center}
+  % \vspace*{12pt}
+  {\LARGE Title Comes Here}
+  % \vspace{12pt}
+\end{center}
+% % abstract
+% \abstract{Here comes abstract}
+% % 注釈の番号をリセット
+% \renewcommand{\thefootnote}{\arabic{footnote}}
+% main document
+\section{第1節}
+%
+\begin{tcolorbox}[enhanced,
+    colframe=black, 
+    colback=white,%背景の色
+    % title = Title comes here,
+    boxrule=.75pt, 
+    % sharp corners,%角がｶｸｶｸ
+    drop fuzzy shadow=black!30!white,
+    fonttitle = \bfseries]
+\begin{lemma}
+hogehoge
+\end{lemma}
+\end{tcolorbox}
+%
+\vspace{\baselineskip}
+\begin{defbox}
+\begin{definition}
+  hoge
+\end{definition}
+\end{defbox}
+%
+\begin{proof}
+prooooof.  
+\end{proof}
+%
+\vspace{\baselineskip}
+\begin{theorembox}
+\begin{theorem}
+  hoge
+\end{theorem}
+\end{theorembox}
+%
+\end{document}
